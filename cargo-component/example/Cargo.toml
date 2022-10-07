@@ -1,0 +1,17 @@
+[package]
+name = "service"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wit-bindgen-guest-rust = { git = "https://github.com/bytecodealliance/wit-bindgen", default_features = false }
+
+[package.metadata.component.imports]
+cache = "cache.wit"
+origin = "backend.wit"
+
+[package.metadata.component.exports]
+backend = "backend.wit"

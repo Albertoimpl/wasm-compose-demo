@@ -1,0 +1,8 @@
+search-paths:
+  - ../backend/target/wasm32-unknown-unknown/release
+  - ../middleware/target/wasm32-unknown-unknown/release
+
+instantiations:
+ $component:
+   arguments:
+     backend: middleware
